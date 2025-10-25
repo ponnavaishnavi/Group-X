@@ -83,9 +83,9 @@ Students can understand faster, remember longer, and enjoy learning like never b
         
 📚 Students Understand Faster & Retain Longer
 
-**👥 Team Roles and Work Allocation**
+## 👥 Team Roles and Work Allocation
 
-*1️⃣ Text Processing & NLP*
+***1️⃣ Text Processing & NLP***
 
 Role: Convert raw text into structured scenes
 Tasks:
@@ -110,8 +110,7 @@ Example: ["Photosynthesis converts sunlight into energy", "It occurs in chloropl
 
 
 
-
-*2️⃣ Image Generation*
+***2️⃣ Image Generation***
 
 Role: Generate visual representation for each scene
 Tasks:
@@ -136,7 +135,7 @@ Deliverables:
 
 Scene images ready for video composition
 
-*3️⃣ Audio Narration + Scene Video Clips*
+***3️⃣ Audio Narration + Scene Video Clips***
 
 Role: Create audio narration and merge with images for each scene
 Tasks:
@@ -157,7 +156,7 @@ Deliverables:
 
 Individual scene video clips (scene_1.mp4, scene_2.mp4, …)
 
-*4️⃣ Video Compilation & Final Rendering*
+***4️⃣ Video Compilation & Final Rendering***
 
 1.Role: Combine all scene clips into a final video
 Tasks:
@@ -180,7 +179,7 @@ Final complete video ready for download or presentation
 
 ***🧠 How It Works (Step-by-Step)***
 
-***Step-1:🧾 Text Extraction from Multiple File Formats***
+## Step-1:🧾 Text Extraction from Multiple File Formats
 
 This Google Colab project allows you to upload a file and automatically extract text from various file formats — including .txt, .pdf, .docx, .csv, .json, .pptx, and even image files (.png, .jpg, .jpeg) using OCR.
 
@@ -193,26 +192,26 @@ Based on the file extension, it decides which extraction method or library to us
 •	***Extract text:***
 Reads or processes the file:
 
-.txt: Simple read
+           .txt: Simple read
 
-.pdf: Uses PyMuPDF (fitz)
+           .pdf: Uses PyMuPDF (fitz)
 
-.docx: Uses python-docx
+           .docx: Uses python-docx
 
-.csv: Uses pandas
+           .csv: Uses pandas
 
-.json: Uses json and pprint
+           .json: Uses json and pprint
 
-.pptx: Uses python-pptx
+           .pptx: Uses python-pptx
 
-.png / .jpg / .jpeg: Uses pytesseract and Pillow for OCR
+           .png / .jpg / .jpeg: Uses pytesseract and Pillow for OCR
 
 •	***Display the extracted text:***
 Shows the extracted text inside a formatted HTML block for easy reading.
 
 Displays a message if no text is found.
 
-***🚀 Features***:
+## 🚀 Features:
 
 📄 Extract text from Word, PDF, and TXT files
 
@@ -225,3 +224,47 @@ Displays a message if no text is found.
 ⚙️ Automatically detects file type and uses the right extraction method
 
 🧠 Built for Google Colab — no local setup required
+## Step-2: 🎬 AI Explainer Video Pipeline (Female Voice) – Colab
+
+Create *automated explainer videos* from documents or images with a *female voice narration* — fully in *Google Colab*!  
+
+---
+
+## ✨ Features
+- 📄 Supports multiple file types: .txt, .pdf, .docx, .csv, .json, .pptx, .png, .jpg, .jpeg  
+- 📝 Summarizes long text using *Facebook BART Transformer*  
+- 🎤 Generates *female-like voice narration* using *gTTS*  
+- 🖌 Creates a simple *background image* for the video  
+- 🎥 Combines *audio + image* into a downloadable .mp4 video  
+- ⬇ Direct download link in Colab  
+
+---
+
+## 🚀 Workflow
+1. *Upload File* – Upload your document or image 📁  
+2. *Extract Text* – Automatically detects file type and extracts content ✂  
+3. *Verify Text* – Displays extracted content for review 👀  
+4. *Summarize Text* – Creates a concise summary using AI 🤖  
+5. *Convert to Audio* – Generates female voice narration 🎧  
+6. *Create Background Image* – Adds a simple colored background with text 🖼  
+7. *Generate Video* – Combines image + audio into .mp4 video 🎬  
+8. *Download Video* – Provides a direct download link 💾  
+
+---
+
+## 📦 Dependencies
+- transformers, torch – Text summarization 🧠  
+- gTTS – Text-to-speech conversion 🎤  
+- moviepy – Video creation 🎞  
+- pillow – Image processing 🎨  
+- pymupdf, python-docx, python-pptx, pytesseract – Text extraction from files 🗂  
+
+---
+
+## 📝 Usage
+1. Open the notebook in *Google Colab* 🌐  
+2. Upload your file when prompted 📤  
+3. Wait for the pipeline to extract, summarize, generate audio, and create the video ⏳  
+4. Download your final *explainer video* 🎥⬇  
+
+---
