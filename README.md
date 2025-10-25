@@ -1,4 +1,4 @@
-📚 **Explainify – Text-to-Visual Learning AI**
+# 📚 **Explainify – Text-to-Visual Learning AI**
 
 **🚨 *Problem Statement*** 
 
@@ -85,7 +85,7 @@ Students can understand faster, remember longer, and enjoy learning like never b
 
 **👥 Team Roles and Work Allocation**
 
-1️⃣ Text Processing & NLP
+*1️⃣ Text Processing & NLP*
 
 Role: Convert raw text into structured scenes
 Tasks:
@@ -108,7 +108,10 @@ A list of scene texts ready for images and narration.
 
 Example: ["Photosynthesis converts sunlight into energy", "It occurs in chloroplasts", ...]
 
-2️⃣ Image Generation
+
+
+
+*2️⃣ Image Generation*
 
 Role: Generate visual representation for each scene
 Tasks:
@@ -133,7 +136,7 @@ Deliverables:
 
 Scene images ready for video composition
 
-3️⃣ Audio Narration + Scene Video Clips
+*3️⃣ Audio Narration + Scene Video Clips*
 
 Role: Create audio narration and merge with images for each scene
 Tasks:
@@ -154,9 +157,9 @@ Deliverables:
 
 Individual scene video clips (scene_1.mp4, scene_2.mp4, …)
 
-4️⃣ Video Compilation & Final Rendering
+*4️⃣ Video Compilation & Final Rendering*
 
-Role: Combine all scene clips into a final video
+1.Role: Combine all scene clips into a final video
 Tasks:
 
 Take all scene clips from Member 3.
@@ -174,3 +177,51 @@ Python, MoviePy, FFMPEG (optional)
 Deliverables:
 
 Final complete video ready for download or presentation
+
+***🧠 How It Works (Step-by-Step)***
+
+***Step-1:🧾 Text Extraction from Multiple File Formats***
+
+This Google Colab project allows you to upload a file and automatically extract text from various file formats — including .txt, .pdf, .docx, .csv, .json, .pptx, and even image files (.png, .jpg, .jpeg) using OCR.
+
+•	***Upload the file:***
+The script uses google.colab.files.upload() to let you upload any supported file.
+
+•	***Detect file type:***
+Based on the file extension, it decides which extraction method or library to use.
+
+•	***Extract text:***
+Reads or processes the file:
+
+.txt: Simple read
+
+.pdf: Uses PyMuPDF (fitz)
+
+.docx: Uses python-docx
+
+.csv: Uses pandas
+
+.json: Uses json and pprint
+
+.pptx: Uses python-pptx
+
+.png / .jpg / .jpeg: Uses pytesseract and Pillow for OCR
+
+•	***Display the extracted text:***
+Shows the extracted text inside a formatted HTML block for easy reading.
+
+Displays a message if no text is found.
+
+***🚀 Features***:
+
+📄 Extract text from Word, PDF, and TXT files
+
+📊 Read and display CSV and JSON data
+
+🎞️ Capture text from PowerPoint (.pptx) slides
+
+🖼️ Perform OCR (Optical Character Recognition) on images
+
+⚙️ Automatically detects file type and uses the right extraction method
+
+🧠 Built for Google Colab — no local setup required
