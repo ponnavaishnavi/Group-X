@@ -82,3 +82,95 @@ Students can understand faster, remember longer, and enjoy learning like never b
         ▼
         
 📚 Students Understand Faster & Retain Longer
+
+**👥 Team Roles and Work Allocation**
+
+1️⃣ Text Processing & NLP
+
+Role: Convert raw text into structured scenes
+Tasks:
+
+Take the input lesson/text.
+
+Split the text into scenes or sentences using NLP (nltk / spacy).
+
+Optionally summarize or highlight key points per scene.
+
+Output scene-wise text for image and audio generation.
+
+Tools:
+
+Python, NLTK (sent_tokenize), SpaCy (optional), Pandas (optional for scene storage)
+
+Deliverables:
+
+A list of scene texts ready for images and narration.
+
+Example: ["Photosynthesis converts sunlight into energy", "It occurs in chloroplasts", ...]
+
+2️⃣ Image Generation
+
+Role: Generate visual representation for each scene
+Tasks:
+
+Take scene texts from Member 1.
+
+Use AI image generation or free stock images.
+
+Options: OpenAI DALL·E, Stable Diffusion, Unsplash API
+
+Save images locally (scene_1.png, scene_2.png, etc.)
+
+Optional: Apply simple overlays or text highlights on images.
+
+Tools:
+
+Python, OpenAI API, Requests, PIL (Pillow)
+
+Image editing software (optional)
+
+Deliverables:
+
+Scene images ready for video composition
+
+3️⃣ Audio Narration + Scene Video Clips
+
+Role: Create audio narration and merge with images for each scene
+Tasks:
+
+Take scene texts from Member 1.
+
+Generate TTS audio for each scene (gTTS or ElevenLabs).
+
+Combine scene image + narration into a short video clip.
+
+Add scene titles / captions / small animations (zoom, fade, crossfade).
+
+Tools:
+
+Python, gTTS, MoviePy, PIL (for text overlays)
+
+Deliverables:
+
+Individual scene video clips (scene_1.mp4, scene_2.mp4, …)
+
+4️⃣ Video Compilation & Final Rendering
+
+Role: Combine all scene clips into a final video
+Tasks:
+
+Take all scene clips from Member 3.
+
+Apply transitions between scenes (crossfade, fade-in/out).
+
+Add background music or final audio enhancements (optional).
+
+Export final Explainify video (explainify_ai_video.mp4).
+
+Tools:
+
+Python, MoviePy, FFMPEG (optional)
+
+Deliverables:
+
+Final complete video ready for download or presentation
