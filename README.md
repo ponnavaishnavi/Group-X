@@ -268,3 +268,100 @@ Create *automated explainer videos* from documents or images with a *female voic
 4. Download your final *explainer video* 🎥⬇  
 
 ---
+## Step-3: Image Generation
+🧠 Description of the Work
+
+This code uses Stable Diffusion, a powerful AI image generation model, to create realistic images from text prompts using Python.
+
+🔍 **Step-by-Step Explanation**
+
+Installing Dependencies
+
+- *!pip install -q diffusers transformers accelerate torch pillow*
+
+
+Installs all the required libraries:
+
+diffusers → to load and run diffusion models
+
+transformers → for text encoding
+
+accelerate → for efficient GPU computation
+
+torch → PyTorch framework for deep learning
+
+pillow → for image processing and saving
+
+Importing Required Modules
+
+- *from diffusers import StableDiffusionPipeline
+import torch*
+
+
+Imports the AI model pipeline (StableDiffusionPipeline)
+
+Imports PyTorch for GPU and tensor operations
+
+Checking GPU Availability
+
+- *print("GPU Available:", torch.cuda.is_available())*
+
+
+Confirms whether a CUDA-enabled GPU is available for faster image generation.
+
+Loading the Pre-trained Model
+
+- *pipe = StableDiffusionPipeline.from_pretrained(
+    "runwayml/stable-diffusion-v1-5",
+    torch_dtype=torch.float16,
+    safety_checker=None
+).to("cuda")*
+
+
+Loads the Stable Diffusion v1.5 model (by RunwayML).
+
+Uses half precision (float16) for faster inference.
+
+Moves the model to the GPU for acceleration.
+
+Disables safety checker (optional in local usage).
+
+Generating the Image
+
+- *prompt = "dogs"
+- image = pipe(prompt, num_inference_steps=30).images[0]*
+
+
+The model converts the text prompt into an image.
+
+num_inference_steps controls the quality (more steps → higher quality).
+
+Displaying and Saving the Output
+
+- *display(image)
+- image.save("my_image.png")*
+
+
+Shows the generated image in the output window.
+
+Saves it locally as my_image.png.
+
+🎨 **Example Output**
+
+If the prompt is:
+
+"Dogs"
+
+The model will create a scientific visual showing dogs in the picture.
+
+⚙️ **Purpose**
+
+This demonstrates how text-to-image generation works using AI models. It can be used for:
+
+- Educational visualizations
+
+- Creative content generation
+
+- Design prototypes
+
+- Data visualization in AI projects
