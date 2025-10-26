@@ -365,3 +365,129 @@ This demonstrates how text-to-image generation works using AI models. It can be 
 - Design prototypes
 
 - Data visualization in AI projects
+
+## Step-4: 🎤 Audio Narration and Voice Generation
+
+🧠 Description of the Work
+
+This step converts text scenes or summaries into spoken audio narration using Google Text-to-Speech (gTTS).
+The generated voice is smooth, clear, and professional — ideal for explainer or educational videos.
+
+🔍 Step-by-Step Explanation
+
+1️⃣ Install and Import Dependencies
+
+!pip install -q gTTS
+from gtts import gTTS
+
+
+gTTS: Google Text-to-Speech API that converts text into spoken MP3 audio.
+
+2️⃣ Generate the Narration
+
+narration_text = "Artificial Intelligence helps automate complex processes in industries."
+tts = gTTS(text=narration_text, lang='en', slow=False, tld='com')
+tts.save("narration.mp3")
+
+
+Converts text into speech using Google’s TTS engine.
+
+You can adjust parameters:
+
+lang: Language (default 'en' for English)
+
+slow: False for normal speed, True for slower narration
+
+tld: Use 'co.uk', 'com', 'ca', etc. to slightly change the accent.
+
+3️⃣ Play and Preview Audio
+
+from IPython.display import Audio
+Audio("narration.mp3")
+
+
+Allows quick preview in Colab.
+
+🎧 Output:
+A clear MP3 voice file (narration.mp3) that can be directly merged into your explainer video.
+
+## Step-5: 🎞️ Scene Composition and Video Creation
+
+🧠 Description of the Work
+
+This part combines AI-generated images + audio narration to create professional video clips for each scene using MoviePy.
+
+🔍 Step-by-Step Explanation
+
+1️⃣ Install and Import Dependencies
+
+!pip install -q moviepy
+from moviepy.editor import ImageClip, AudioFileClip, concatenate_videoclips
+
+
+2️⃣ Create Scene Clips
+
+image = "scene_1.png"
+audio = "narration.mp3"
+
+image_clip = ImageClip(image, duration=8)  # Each scene duration in seconds
+audio_clip = AudioFileClip(audio)
+
+video_clip = image_clip.set_audio(audio_clip)
+video_clip.write_videofile("scene_1.mp4", fps=30)
+
+
+Adds synchronized voiceover to each AI-generated image.
+
+Ensures duration matches narration length.
+
+Saves output as an MP4 file.
+
+3️⃣ Combine Multiple Scenes
+
+final = concatenate_videoclips([clip1, clip2, clip3], method="compose")
+final.write_videofile("Explainify_Final_Video.mp4", fps=30)
+
+
+Merges multiple scene clips with smooth transitions.
+
+Exports final video in HD format.
+
+🎬 Output:
+✅ Explainify_Final_Video.mp4 – fully synchronized educational explainer video with:
+
+AI-generated visuals
+
+Professional narration
+
+Smooth transitions and titles
+
+## Step-6: 🪄 Adding Professional Effects and Styling
+
+To enhance the overall video quality, this project applies professional elements like:
+
+🎨 Corporate-Style Text Overlays
+
+Scene titles appear at the bottom third (lower-third overlay).
+
+Semi-transparent gradient background for text.
+
+Clean typography using Roboto/OpenSans font families.
+
+🎥 Cinematic Transitions
+
+Crossfade between scenes.
+
+Subtle zoom (Ken Burns effect) for realism.
+
+🎞️ Intro & Outro Cards
+
+Automatically generates intro and outro slides:
+
+“Professional Explainer – Key Insights Ahead”
+
+“Thank You – For Your Attention”
+
+💡 Animations
+
+Smooth scaling, fading, and sliding effects for a modern feel.
